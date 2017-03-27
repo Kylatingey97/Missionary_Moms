@@ -39,4 +39,17 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def destroy
+    # Perform the lookup
+    @product = Product.find(params[:id])
+
+    # Destroy/delete the record
+    @product.destroy
+
+    # Redirect
+    respond_to do |format|
+      format.html { redirect_to product_url, notice: 'Product was removed.' }
+    end
+  end
+
 end
