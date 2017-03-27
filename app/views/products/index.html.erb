@@ -3,7 +3,7 @@
 <%= link_to "Create New Item", new_product_path %>
 
 <% @products.each do |product| %>
-  <p><%= link_to product.title, product_path(product) %></p>
+  <p><%= link_to product.title, product_show_path(product) %></p>
   <p><%= product.subtitle %></p>
   <p><%= product.body %></p>
   <%= image_tag product.thumb_image unless product.thumb_image.nil? %>
