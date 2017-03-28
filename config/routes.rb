@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'product/:id', to: 'products#show', as: 'product_show'
 
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'checkout', to: 'pages#checkout'
 
   root to: 'pages#home'
 end
