@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
 
     # Redirect
     respond_to do |format|
-      format.html { redirect_to product_url, notice: 'Product was removed.' }
+      format.html { redirect_to products_url, notice: 'Product was removed.' }
     end
   end
 
